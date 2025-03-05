@@ -1,0 +1,97 @@
+definitions:
+    name: SOT
+    sections:
+        SampleStructure:  
+          base_sections:
+            - nomad.datamodel.metainfo.basesections.CompositeSystem
+            - nomad.datamodel.data.EntryData
+          m_annotations:
+            eln:
+              hide: ['datetime'] #hide inherited quantity for metadata quality
+          quantities:
+            UserCase_Sample_device_width:
+              type: np.float64
+              unit: mm 
+              m_annotations:
+                eln:
+                  component: NumberEditQuantity
+                  display:
+                    unit: mm
+            UserCase_Sample_device_length:
+              type: np.float64
+              unit: mm 
+              m_annotations:
+                eln:
+                  component: NumberEditQuantity
+                  display:
+                    unit: mm
+            UserCase_Sample_device_geometry:
+              type: str
+              m_annotations:
+                eln:
+                  component: StringEditQuantity
+          sub_sections:
+            layers:
+              section:
+                quantities:
+                  layer:
+                    type: Substance
+                    m_annotations:
+                      eln:
+                        component: ReferenceEditQuantity
+              repeats: true
+
+        SOTMeasurement:
+            base_sections:
+               - nomad.datamodel.metainfo.eln.ElnBaseSection
+               - nomad.datamodel.data.EntryData
+               - nomad.datamodel.metainfo.basesections.CompositeSystemReference
+            quantities:
+                UserCase_Sample_sample_name:
+                  type: str
+                  m_annotations:
+                      eln:
+                        component: StringEditQuantity
+                Experiment_RunNumber:
+                  type: int
+                  m_annotations:
+                      eln:
+                        component: NumberEditQuantity
+                Experiment_MeasurementParameters_field_direction:
+                  type: str
+                  m_annotations:
+                      eln:
+                        component: StringEditQuantity
+                Experiment_MeasurementParameters_current_pulse:
+                  type: np.float64
+                  unit: mA
+                  m_annotations:
+                    eln:
+                      component: NumberEditQuantity
+                      display:
+                        unit: mA                
+                Experiment_MeasurementParameters_magnetic_field_sequence:
+                  type: str # this is a string for simplicity 
+                  unit: V 
+                  m_annotations:
+                      eln:
+                        component: StringEditQuantity
+                        display:
+                          unit: V                
+
+        Substance:
+          base_sections:
+          - nomad.datamodel.metainfo.eln.Substance
+          - nomad.datamodel.data.EntryData
+          m_annotations:
+            eln:
+              hide: ['datetime'] #hide inherited quantity for metadata quality
+          quantities:
+            UserCase_Sample_layer_thickness:
+              type: np.float64
+              unit: nm 
+              m_annotations:
+                eln:
+                  component: NumberEditQuantity
+                  display:
+                    unit: nm

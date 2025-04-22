@@ -3,5 +3,7 @@ This repository contains the code developed for the ADABI Master thesis (Special
 
 The thesis is titled "Towards FAIR Research Data Management in Experimental Materials Science: A Metadata Pipeline"
 
-If you are interested in the thesis, drop me an email at: filippo [dot] vasone [at] gmail [dot] com
+The thesis is available on Zenodo: https://zenodo.org/records/15226191. 
+
+If you are interested in having a chat on the topic, drop me an email at: filippo [dot] vasone [at] gmail [dot] com
 

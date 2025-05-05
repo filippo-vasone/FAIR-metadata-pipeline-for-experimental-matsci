@@ -5,5 +5,5 @@ The thesis is titled "Towards FAIR Research Data Management in Experimental Mate
 
 The thesis is available on Zenodo: https://zenodo.org/records/15226191. 
 
-If you are interested in having a chat on the topic, drop me an email at: filippo [dot] vasone [at] gmail [dot] com
+If you are interested in having a chat on the topic, drop me an email at: filippo [dot] vasone [at] unibo [dot] it
 
